@@ -24,11 +24,16 @@ async getData() {
     await axios.get(url)
     .then(
         response => {
-            this.setState({
-            voltage:response.data.volatage,
-            current:response.data.current,
+
+          response.data.forEach(element => {
+            this.setState({current:this.state.current.concat([element.current])})
+            this.setState({voltage:this.state.voltage.concat([element.voltage])})
+          });
+      //       this.setState({
+      //       voltage:response.data.volatage,
+      //       current:response.data.current,
             
-      })
+      // })
     })
     .catch(
         error => {
@@ -66,6 +71,7 @@ render() {
   };
   return (
   <div className="App">
+   {console.log(this.state.temp)}
   <div >
   <Segment inverted>
         <Header

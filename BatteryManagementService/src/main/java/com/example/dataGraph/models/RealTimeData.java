@@ -339,15 +339,5 @@ public class RealTimeData {
 	public void setShortCircuit(String shortCircuit) {
 		this.shortCircuit = shortCircuit;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
 }

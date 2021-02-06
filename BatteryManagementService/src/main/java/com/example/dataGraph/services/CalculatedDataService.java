@@ -6,6 +6,6 @@ import com.example.dataGraph.models.RealTimeData;
 
 public interface CalculatedDataService {
 
-	double calculation();
-	List<RealTimeData> getAllRealTimeData();
+	double calculate(RealTimeData realTimeData);
+
 }

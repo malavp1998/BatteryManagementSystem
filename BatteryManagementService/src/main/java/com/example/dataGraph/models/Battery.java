@@ -13,36 +13,40 @@ public class Battery {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id", nullable = false, updatable = false)
 	private Long id;
+	@Column(name="currentt",nullable = true)
 	private int current;
-	private int voltage;
-	private int charge;
+	@Column(nullable = true)
+	private String voltage;
+	@Column(nullable = true)
+	private double charge;
 	public Battery() {
 		
 	}
-    
-	public int getCharge() {
-		return charge;
+	public Long getId() {
+		return id; 
 	}
-
-	public void setCharge(int charge) {
-		this.charge = charge;
+	public void setId(Long id) {
+		this.id = id;
 	}
-
 	public int getCurrent() {
 		return current;
 	}
-
 	public void setCurrent(int current) {
 		this.current = current;
 	}
-
-	public int getVoltage() {
+	public String getVoltage() {
 		return voltage;
 	}
-
-	public void setVoltage(int voltage) {
+	public void setVoltage(String voltage) {
 		this.voltage = voltage;
 	}
+	public double getCharge() {
+		return charge;
+	}
+	public void setCharge(double charge) {
+		this.charge = charge;
+	}
+    
 
 	
 	
